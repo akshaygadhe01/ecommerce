@@ -5,17 +5,19 @@
 </div>
 
 <div class="row">
-  <div class="col-md-12">
-    <a href="#" class="list-group-item  d-flex justify-content-between"
-     *ngFor="let product of product">
-      <div>
-        <h4 class="list-group-item-heading">{{product.name}}</h4>
-        <p class="list-group-item-test">{{product.descr}}</p>
-        <p class="list-group-item-test">Price : {{product.price}} ₹ </p>
+    <div class="card-group">
+        <div class="card-body text-center" *ngFor="let product of product">
+          
+          <div class="card" style="width:200px">
+              <img class="card-img-top" src="{{product.imgurl}}" alt="Card image"class="img-responsive" style="max-height:200px;">
+              <div class="card-body">
+                <h4 class="card-title">{{product.name}}</h4>
+                <p class="card-text">{{product.descr}}</p>
+                <p class="card-text">Price : {{product.price}} ₹</p>
+              </div>
+            </div>
+       
       </div>
-      <span> 
-        <img [src]="product.imgurl" alt="" class="img-responsive" style="max-height:100px;">
-      </span>
-    </a>
-  </div>
+
+  
 </div>
